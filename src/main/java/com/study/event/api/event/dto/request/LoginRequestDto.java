@@ -1,7 +1,6 @@
 package com.study.event.api.event.dto.request;
 
 import lombok.*;
-import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @ToString
@@ -9,9 +8,10 @@ import org.springframework.web.multipart.MultipartFile;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class EventUserSaveDto {
+public class LoginRequestDto {
 
     private String email;
     private String password;
 
+    // 자동로그인 여부 ...
 }

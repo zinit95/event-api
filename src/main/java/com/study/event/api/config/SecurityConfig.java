@@ -30,9 +30,9 @@ public class SecurityConfig {
                 .and()
                 .csrf().disable() // 필터설정 off
                 .httpBasic().disable() // 베이직 인증 off
-                .formLogin().disable() //로그인창 off
-                .authorizeRequests() //요청 별로 인가 설정
-                .antMatchers("/**").permitAll() // 인가 설정 off, 모든 요청 허용
+                .formLogin().disable() // 로그인창 off
+                .authorizeRequests() // 요청 별로 인가 설정
+                .antMatchers("/**").permitAll() // 인가 설정 off
         ;
 
         return http.build();
