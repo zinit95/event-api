@@ -234,15 +234,15 @@ public class EventUserService {
         // 인증정보를 어떻게 관리할 것인가? 세션 or 쿠키 or 토큰
         // 인증정보(이메일, 닉네임, 프사, 토큰정보)를 클라이언트에게 전송
 
-        //토큰 생성
+        // 토큰 생성
         String token = tokenProvider.createToken(eventUser);
-
 
         return LoginResponseDto.builder()
                 .email(eventUser.getEmail())
                 .role(eventUser.getRole().toString())
                 .token(token)
                 .build();
+
     }
 
 }
