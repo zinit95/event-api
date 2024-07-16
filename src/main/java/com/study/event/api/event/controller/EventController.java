@@ -23,9 +23,9 @@ public class EventController {
     @GetMapping("/page/{pageNo}")
     public ResponseEntity<?> getList(
             // 토큰파싱 결과로 로그인에 성공한 회원의 PK
-            @AuthenticationPrincipal String userId,
-            @RequestParam(required = false) String sort,
-            @PathVariable int pageNo
+             @AuthenticationPrincipal String userId,
+             @RequestParam(required = false) String sort,
+             @PathVariable int pageNo
     ) throws InterruptedException {
 
         log.info("token user id : {}", userId);
